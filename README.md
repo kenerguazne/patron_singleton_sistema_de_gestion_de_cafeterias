@@ -1,52 +1,30 @@
-# ☕ CaféGestión - Sistema para Cafeterías con singleton
+# ☕ CaféGestión - Sistema CRUD con Singleton en JavaScript
 
-**CaféGestión** es una aplicación web desarrollada como proyecto académico para la asignatura de **Ingeniería de Software II**, con el objetivo de aplicar conceptos clave como diseño de software, separación de responsabilidades, arquitectura, patrones, control de versiones y gestión de métricas.
-
----
-
-## 🎯 ¿Qué problema resuelve?
-
-Muchos negocios como cafeterías aún gestionan su inventario de forma manual, lo que ocasiona errores y desorganización.  
-**CaféGestión** permite digitalizar este proceso, ofreciendo una herramienta sencilla para registrar productos, controlar precios y stock, todo en una interfaz accesible y fácil de usar.
+Bienvenido a **CaféGestión**, un sistema web simple para gestionar productos de cafetería desarrollado en JavaScript. Este proyecto incluye un CRUD completo con almacenamiento en `localStorage`, y la implementación del **patrón de diseño Singleton**, como parte de buenas prácticas en arquitectura de software.
 
 ---
 
-## 👥 Usuarios o actores principales
+🧩 ¿En qué consiste el patrón Singleton?
+El patrón Singleton es un patrón de diseño que garantiza que una clase tenga una única instancia durante toda la ejecución del programa y proporciona un punto de acceso global a esa instancia. Es útil para manejar configuraciones, sesiones o cualquier estado compartido que no deba duplicarse.
 
-- Propietarios de cafeterías
-- Encargados o empleados de administración
-- En una evolución futura: cajeros con diferentes roles
+🛠️ ¿Cómo lo implementaste?
+Implementé el patrón Singleton mediante una clase llamada AppConfig que:
 
----
+Verifica si ya existe una instancia previa al crearla.
 
-## ✅ Funcionalidades actuales
+Si existe, la devuelve; si no, crea una nueva.
 
-- Registro y edición de productos con nombre, categoría, precio, stock y descripción
-- Eliminación de productos
-- Visualización en tabla dinámica
-- Búsqueda en tiempo real
-- Almacenamiento de datos persistente con `localStorage`
+Usa localStorage para guardar y recuperar automáticamente la configuración de la app y el usuario actual.
 
+La clase se encuentra en el archivo singleton_guazne/singleton.js y se importa desde el archivo principal app.js.
 
----
+⚙️ ¿Qué hace tu ejemplo?
+Mi ejemplo utiliza el Singleton para:
 
-## 📦 Cómo usar el sistema
+Gestionar la configuración global de la aplicación (modo, versión, autor).
 
-1. Clona o descarga el repositorio.
-2. Abre el archivo `index.html` en tu navegador.
-3. Usa el formulario para agregar productos.
-4. Edita o elimina productos directamente desde la tabla.
-5. Todo se guarda automáticamente en el navegador gracias a `localStorage`.
+Guardar y mantener el usuario actual entre recargas de página.
 
----
+Persistir la información en localStorage, asegurando que la configuración se conserve incluso si se cierra el navegador.
 
-## 👨‍🎓 Autor
-
-- **Luis Carlos Garavito Agámez**
-- **william steven ramos arlgel**
-- **kener david guazne alvarez**
-- Ingeniería de Software II – 2025
-
----
-
-> Proyecto educativo con fines académicos. Libre para modificar, reutilizar y extender en nuevos contextos de aprendizaje.
+Permitir al usuario cambiar de sesión (cerrar sesión y volver a ingresar).
