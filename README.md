@@ -1,4 +1,4 @@
-# ☕ CaféGestión - Sistema para Cafeterías
+# ☕ CaféGestión - Sistema para Cafeterías con singleton
 
 **CaféGestión** es una aplicación web desarrollada como proyecto académico para la asignatura de **Ingeniería de Software II**, con el objetivo de aplicar conceptos clave como diseño de software, separación de responsabilidades, arquitectura, patrones, control de versiones y gestión de métricas.
 
